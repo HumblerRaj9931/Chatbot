@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: chatbot
+    env: python
+    region: oregon   # ya apka nearest region
+    buildCommand: pip install -r requirements.txt
+    startCommand: bash start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: PYTHON_VERSION
+        value: 3.10
